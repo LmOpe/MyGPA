@@ -6,4 +6,5 @@ app_name = 'course'
 urlpatterns = [
     path('auth/users/activate/<str:uid>/<str:token>', views.activateUsersView, name="activate"),
     path('auth/users/resend-activation-email/', views.resendActivationLinkView, name='resend-activate'),
+    path('auth/users/password-reset/<str:uid>/<str:token>', views.passwordResetView, name='reset-password'),
 ]
